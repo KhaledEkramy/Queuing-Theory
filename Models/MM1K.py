@@ -63,10 +63,10 @@ class MM1K:
 # Testing
 
 def test():
-    sys_in = SystemInputs.SystemInputs(6, 3, 3, float('inf'))
-    mmc = MMC(sys_in)
-    print('L = ' , mmc.average_customers())
-    print('Lq = ' , mmc.average_customers_queue())
-    print('W = ' , mmc.average_wait())
-    print('Wq = ' , mmc.average_wait_queue())
+    sys_in = SystemInputs.SystemInputs(2, 2.4, 1, 5)
+    mm1k = MM1K(sys_in)
+    print('L = ' , mm1k.average_customers())
+    print('Lq = ' , mm1k.average_customers_queue())
+    print('W = ' , mm1k.average_wait())
+    print('Wq = ' , mm1k.average_wait_queue())
     
