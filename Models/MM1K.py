@@ -11,12 +11,8 @@ class MM1K:
         average_wait_queue = Wq
         lambda_dash = lambda * (1 - p_k) -- not needed
     
-    Attributes:
-        _sys_inputs (SystemInputs): The system inputs for the queueing model.
-        _sys_capacity (int): The system's capacity.
-        _row (float): The traffic intensity (arrival_rate / service_rate).
-        _p_k (float): The probability of all servers being occupied.
-        _lambda_dash (float): The adjusted arrival rate after considering server occupation.
+    Constructor:
+        sys_inputs (SystemInputs): The system inputs for the queueing model.
     '''
     def __init__(self, sys_inputs: SystemInputs):
         self._sys_inputs = sys_inputs

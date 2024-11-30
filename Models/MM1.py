@@ -9,6 +9,9 @@ class MM1:
         average_customers_queue = Lq
         average_wait = W
         average_wait_queue = Wq
+        
+    constructor:
+        sys_inputs (SystemInputs): The system inputs for the queueing model.
     '''
     def __init__(self, sys_inputs: SystemInputs):
         self._sys_inputs = sys_inputs
