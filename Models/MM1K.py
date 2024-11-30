@@ -9,7 +9,7 @@ class MM1K:
         average_customers_queue = Lq
         average_wait = W
         average_wait_queue = Wq
-        lambda_dash = lambda * (1 - p_k)
+        lambda_dash = lambda * (1 - p_k) -- not needed
     
     Attributes:
         _sys_inputs (SystemInputs): The system inputs for the queueing model.
@@ -58,4 +58,15 @@ class MM1K:
     
     def average_wait_queue(self):
         return self.average_customers_queue() / self._lambda_dash
+    
+    
+# Testing
+
+def test():
+    sys_in = SystemInputs.SystemInputs(6, 3, 3, float('inf'))
+    mmc = MMC(sys_in)
+    print('L = ' , mmc.average_customers())
+    print('Lq = ' , mmc.average_customers_queue())
+    print('W = ' , mmc.average_wait())
+    print('Wq = ' , mmc.average_wait_queue())
     
