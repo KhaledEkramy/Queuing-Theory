@@ -65,4 +65,3 @@ def test():
     print('Lq = ' , mm1k.average_customers_queue())
     print('W = ' , mm1k.average_wait())
     print('Wq = ' , mm1k.average_wait_queue())
-    
