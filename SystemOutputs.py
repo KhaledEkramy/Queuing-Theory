@@ -1,3 +1,4 @@
+import sys
 from SystemInputs import SystemInputs
 from Models.MM1 import MM1
 from Models.MM1K import MM1K
@@ -34,3 +35,12 @@ def play(arrival_rate: float, service_rate: float, num_of_servers: int, sys_capa
     
     # Return the results of the model as a list of the form [L, Lq, W, Wq]
     return (str(type(model)).split('.')[1], [L, Lq, W, Wq] )
+
+if __name__ == '__main__':
+    arrival_rate = float(sys.argv[1])
+    service_rate = float(sys.argv[2])
+    num_of_servers = int(sys.argv[3])
+    sys_capacity = sys.argv[4]
+    module_name, results = play(arrival_rate, service_rate, num_of_servers, sys_capacity)
+    print(module_name, results[0], results[1], results[2], results[3])
+    
